@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+  <title>Form Reservasi Hotel</title>
+  <link rel="stylesheet" href="style_hotel.css" type="text/css" />
+</head>
+<body>
+  <h2>Form Reservasi Hotel</h2>
+  <form action="proses_reservasi.xhtml" method="post">
+    <table>
+      <tr>
+        <td>Nama Tamu</td>
+        <td><input type="text" name="nama" id="nama" /></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" name="email" id="email" /></td>
+      </tr>
+      <tr>
+        <td>Nomor Telepon</td>
+        <td><input type="text" name="telepon" id="telepon" /></td>
+      </tr>
+      <tr>
+        <td>Tanggal Check-in</td>
+        <td><input type="date" name="checkin" id="checkin" /></td>
+      </tr>
+      <tr>
+        <td>Tanggal Check-out</td>
+        <td><input type="date" name="checkout" id="checkout" /></td>
+      </tr>
+      <tr>
+        <td>Jumlah Tamu</td>
+        <td><input type="number" name="jumlah_tamu" id="jumlah_tamu" min="1" /></td>
+      </tr>
+      <tr>
+        <td>Jenis Kamar</td>
+        <td>
+          <select name="jenis_kamar" id="jenis_kamar">
+            <option value="standar">Standar</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Permintaan Khusus</td>
+        <td><textarea name="permintaan" id="permintaan" rows="3"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <input type="submit" value="Kirim" />
+          <input type="reset" value="Batal" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

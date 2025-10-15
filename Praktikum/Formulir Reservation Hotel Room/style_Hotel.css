@@ -1,0 +1,154 @@
+/* ====== Reset dasar ====== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f6f0e7, #fdfcfb);
+  margin: 0;
+  padding: 50px 0;
+  color: #3a3a3a;
+}
+
+/* ====== Heading ====== */
+h2 {
+  text-align: center;
+  color: #5a4634;
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ====== Container Form ====== */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  border-top: 8px solid #c6a063; /* gold accent */
+}
+
+/* ====== Tabel ====== */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+td {
+  padding: 8px 0;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #4b3d2f;
+}
+
+/* Kolom pertama */
+td:first-child {
+  width: 35%;
+  font-weight: 600;
+}
+
+/* Kolom kedua */
+td:last-child {
+  width: 65%;
+}
+
+/* ====== Input, Select, dan Textarea ====== */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d4c7b0;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fffaf3;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #c6a063;
+  outline: none;
+  box-shadow: 0 0 5px rgba(198, 160, 99, 0.5);
+}
+
+/* ====== Tombol ====== */
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tombol "Kirim" */
+input[type="submit"] {
+  background: linear-gradient(135deg, #c6a063, #b38a56);
+  color: white;
+  box-shadow: 0 3px 8px rgba(198, 160, 99, 0.4);
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #d8b472, #b9975e);
+  transform: translateY(-1px);
+}
+
+/* Tombol "Batal" */
+input[type="reset"] {
+  background: #ede7df;
+  color: #5a4634;
+}
+
+input[type="reset"]:hover {
+  background: #e0d5c7;
+  transform: translateY(-1px);
+}
+
+/* ====== Textarea ====== */
+textarea {
+  resize: vertical;
+}
+
+/* ====== Efek Hover di Input ====== */
+input:hover,
+select:hover,
+textarea:hover {
+  background-color: #fffefb;
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 600px) {
+  form {
+    padding: 25px 20px;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  td:first-child {
+    margin-top: 10px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
