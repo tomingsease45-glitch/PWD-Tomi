@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"> 
+
+
+    <h:head>
+        <title>If-Else (Internal Script)</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function(){
+        // Nilai default (langsung terisi)
+        var iage = 20; // ganti angka ini jika ingin default lain
+        var sMF = 'M'; // 'M' atau 'F'
+
+        // Fungsi kecil untuk membaca parameter URL (opsional)
+        function getParam(name) {
+            try {
+                var params = new URL(window.location.href).searchParams;
+                return params.get(name);
+            } catch (e) {
+                return null;
+            }
+        }
+
+        // Jika ada parameter URL, gunakan untuk menimpa default
+        var ageParam = parseInt(getParam('age'), 10);
+        if (!isNaN(ageParam)) {
+            iage = ageParam;
+        }
+        var genderParam = (getParam('gender') || '').toUpperCase();
+        if (genderParam === 'M' || genderParam === 'F') {
+            sMF = genderParam;
+        }
+
+        // Tentukan pesan sesuai kondisi
+        var message;
+        if (iage >= 18) {
+            message = (sMF === 'M') ? 'Anda adalah pria dewasa.' : 'Anda adalah wanita dewasa.';
+        } else {
+            message = (sMF === 'M') ? 'Anda adalah pria di bawah umur.' : 'Anda adalah wanita di bawah umur.';
+        }
+
+        // Tampilkan alert otomatis saat halaman dimuat
+        alert(message);
+    })();
+    /*]]>*/
+    </script>
+    </h:head>   
+    <body>  
+        <h1>Demo If-Else (Internal Script)</h1>
+        <p>reload halaman untuk mencoba lagi.</p>
+    </body>
+</html>
